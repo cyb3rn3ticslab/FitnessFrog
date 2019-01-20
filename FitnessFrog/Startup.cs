@@ -44,7 +44,7 @@ namespace FitnessFrog
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("Error");
                 app.UseHsts();
             }
 
@@ -56,7 +56,7 @@ namespace FitnessFrog
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Entries}/{action=Index}/{id?}");
             });
         }
     }
